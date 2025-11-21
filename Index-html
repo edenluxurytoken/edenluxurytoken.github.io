@@ -1,1 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ELUX TOKEN</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #D4AF37;
+      background: #000;
+      text-align: center;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: rgba(0, 0, 0, 0.85);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      border-bottom: 1px solid #D4AF37;
+      z-index: 10;
+    }
+
+    .logo {
+      max-width: 130px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .logo:hover {
+      filter: drop-shadow(0 0 10px gold);
+      transform: scale(1.05);
+    }
+
+    nav a,
+    .lang-btn {
+      margin: 0 10px;
+      color: #D4AF37;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    nav a:hover,
+    .lang-btn:hover {
+      color: #F5D76E;
+      text-shadow: 0 0 8px gold;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 80px 20px;
+    }
+
+    #home {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 100px;
+    }
+
+    .hero-logo {
+      max-width: 220px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3rem;
+      animation: fadeIn 1.4s ease-in-out;
+    }
+
+    .slogan {
+      font-size: 1.3rem;
+      font-style: italic;
+      color: #F5D76E;
+      animation: shine 3s infinite linear, fadeIn 1.6s ease-in-out;
+    }
+
+    .btn,
+    .community-btn {
+      padding: 12px 25px;
+      background: #D4AF37;
+      color: #000;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 15px;
+      display: inline-block;
+    }
+
+    .btn:hover,
+    .community-btn:hover {
+      background: #F5D76E;
+      box-shadow: 0 0 12px gold;
+    }
+
+    /* COMING SOON */
+    #coming {
+      background: #111;
+      padding: 60px 20px;
+    }
+
+    .countdown {
+      font-size: 1.6rem;
+      color: #F5D76E;
+    }
+
+    .prelaunch {
+      font-size: 1.1rem;
+      font-style: italic;
+      margin-top: 5px;
+    }
+
+    /* WHITEPAPER */
+    #whitepaper {
+      background: #000;
+      animation: fadeIn 1.8s ease-in-out;
+    }
+
+    #whitepaper h2 {
+      color: #F5D76E;
+      text-shadow: 0 0 8px gold;
+    }
+
+    /* LOADER */
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .loader-text {
+      color: #D4AF37;
+      margin-top: 10px;
+      animation: shine 2s infinite linear;
+    }
+
+    .loader-bar {
+      width: 150px;
+      height: 4px;
+      background: #D4AF37;
+      margin-top: 10px;
+      animation: grow 2s infinite ease-in-out;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes shine {
+      0% { text-shadow: 0 0 3px gold; }
+      50% { text-shadow: 0 0 15px gold; }
+      100% { text-shadow: 0 0 3px gold; }
+    }
+
+    @keyframes grow {
+      0% { width: 0; }
+      50% { width: 150px; }
+      100% { width: 0; }
+    }
+
+    @keyframes logoLoad {
+      0% { opacity: 0; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.05); filter: drop-shadow(0 0 8px gold); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .loading-logo {
+      max-width: 150px;
+      animation: logoLoad 1.5s ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="loading">
+
+  <!-- LOADER -->
+  <div class="loader">
+    <img src="https://raw.githubusercontent.com/edenluxurytoken/Elux-Token/bd3fd19addbd6777117785984a32f7151122c922/1000007990_1_64x64.png" class="loading-logo">
+    <div class="loader-text">Loading ELUX...</div>
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <img src="https://raw.githubusercontent.com/edenluxurytoken/Elux-Token/bd3fd19addbd6777117785984a32f7151122c922/1000007990_1_64x64.png" class="logo">
+    <nav>
+      <a href="#home" data-fr="Accueil">Home</a>
+      <a href="#about" data-fr="Vision">Vision</a>
+      <a href="#tokenomics" data-fr="Tokenomics">Tokenomics</a>
+      <a href="#roadmap" data-fr="Feuille de route">Roadmap</a>
+      <a href="#coming" data-fr="Bientôt">Coming Soon</a>
+      <a href="#whitepaper" data-fr="Livre blanc">Whitepaper</a>
+      <a href="#contact" data-fr="Contact">Contact</a>
+      <span class="lang-btn" onclick="changeLang('en')">🇬🇧 EN</span>
+      <span class="lang-btn" onclick="changeLang('fr')">🇫🇷 FR</span>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home">
+    <img src="https://raw.githubusercontent.com/edenluxurytoken/Elux-Token/bd3fd19addbd6777117785984a32f7151122c922/1000007990_1_64x64.png" class="hero-logo">
+    <h1 data-fr="ELUX TOKEN">ELUX TOKEN</h1>
+    <p class="slogan" data-fr="L’élégance du luxe, l’innovation de la blockchain.">The elegance of luxury, the innovation of blockchain.</p>
+    <a href="#tokenomics" class="btn" data-fr="Découvrir le projet">Discover the project</a>
+  </section>
+
+  <!-- VISION -->
+  <section id="about">
+    <h2 data-fr="Vision">Vision</h2>
+    <p data-fr="ELUX Token est un projet inspiré par le luxe...">ELUX Token is a luxury-inspired project built on trust, value and elegance.</p>
+    <p data-fr="Notre vision est de créer...">Our vision is to create a secure and sustainable ecosystem connecting blockchain and premium services.</p>
+  </section>
+
+  <!-- TOKENOMICS -->
+  <section id="tokenomics">
+    <h2 data-fr="Tokenomics">Tokenomics</h2>
+    <p data-fr="Nom : Eden Luxury Token (ELUX)">Name: Eden Luxury Token (ELUX)</p>
+    <p data-fr="Blockchain : Binance Smart Chain (BEP-20)">Blockchain: Binance Smart Chain (BEP-20)</p>
+    <p data-fr="Offre totale : 1 000 000 ELUX">Total Supply: 1,000,000 ELUX</p>
+    <p data-fr="Taxe : 0%">Transaction Tax: 0%</p>
+    <p data-fr="60 % verrouillés sur 2 ans">60% locked over 2 years</p>
+    <p>Smart Contract: <a href="https://bscscan.com/address/0xC90466BbcF87620EC595179876921B52F9b71931" target="_blank">0xC90466...1931</a></p>
+  </section>
+
+  <!-- ROADMAP -->
+  <section id="roadmap">
+    <h2 data-fr="Feuille de route">Roadmap</h2>
+    <p>2024: Project conception</p>
+    <p>2025: Website launch</p>
+    <p>2026: Official launch</p>
+  </section>
+
+  <!-- COMING SOON -->
+  <section id="coming">
+    <h2 data-fr="🚀 Bientôt – 2026">🚀 Coming Soon – 2026</h2>
+    <p>Official launch approaching...</p>
+    <p class="countdown" id="countdown"></p>
+    <p class="prelaunch" data-fr="Phase de pré-lancement activée">Pre-launch phase activated – strategic deployment in progress.</p>
+    <a href="https://t.me/edenluxurytoken" target="_blank" class="community-btn" data-fr="Rejoindre la communauté">Join the Community</a>
+  </section>
+
+  <!-- WHITEPAPER -->
+  <section id="whitepaper">
+    <h2 data-fr="Livre blanc – Bientôt disponible">Whitepaper – Coming Soon</h2>
+    <p data-fr="Le document technique officiel sera publié prochainement.">The official technical document will be published soon.</p>
+    <p data-fr="Phase de rédaction en cours.">Drafting phase in progress.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 data-fr="Contact">Contact</h2>
+    <p><a href="mailto:saidnicole47@gmail.com">saidnicole47@gmail.com</a></p>
+    <p><a href="https://bscscan.com/address/0xC90466BbcF87620EC595179876921B52F9b71931" target="_blank">Smart Contract</a></p>
+  </section>
+
+  <script>
+    // Remove loader when page loads
+    window.onload = () => {
+      document.querySelector('.loader').style.display = 'none';
+      document.body.classList.remove('loading');
+    };
+
+    // Countdown
+    const countdownEl = document.getElementById("countdown");
+    const launchDate = new Date("January 1, 2026 00:00:00").getTime();
+    setInterval(() => {
+      const now = new Date().getTime();
+      const diff = launchDate - now;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      countdownEl.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
+
+    // Language switch
+    function changeLang(lang) {
+      document.querySelectorAll("[data-fr]").forEach(el => {
+        el.innerText = lang === "fr" ? el.getAttribute("data-fr") : el.getAttribute("data-en") || el.innerText;
+      });
+    }
+  </script>
+
+</body>
+</html>
 
