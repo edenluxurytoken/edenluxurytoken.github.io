@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ELUX TOKEN</title>
+<style>
+html { scroll-padding-top: 120px; }
+body { margin:0; font-family:Arial,sans-serif; background:#000; color:#D4AF37; text-align:center; }
+header { display:flex; justify-content:space-between; align-items:center; padding:15px 40px; background:rgba(0,0,0,0.85); position:fixed; width:100%; top:0; border-bottom:1px solid #D4AF37; z-index:10; }
+.logo { max-width:130px; transition:.3s; }
+.logo:hover { filter:drop-shadow(0 0 10px gold); transform:scale(1.05); }
+nav a, .lang-btn { margin:0 10px; color:#D4AF37; text-decoration:none; font-weight:bold; cursor:pointer; }
+nav a:hover, .lang-btn:hover { color:#F5D76E; text-shadow:0 0 8px gold; }
+section { padding:80px 20px; }
+#home { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; padding-top:100px; }
+.hero-logo { max-width:220px; }
+.btn, .community-btn { padding:12px 25px; background:#D4AF37; color:#000; font-weight:bold; border-radius:5px; text-decoration:none; margin-top:15px; display:inline-block; }
+.btn:hover, .community-btn:hover { background:#F5D76E; box-shadow:0 0 12px gold;}
+.loader { position:fixed; top:0; left:0; width:100%; height:100%; background:#000; display:flex; flex-direction:column; justify-content:center; align-items:center; z-index:1000; }
+.loading-logo { max-width:150px; animation:logoLoad 1.5s ease-in-out; }
+@keyframes logoLoad {0%{opacity:0;transform:scale(0.8);}50%{opacity:1;transform:scale(1.05);}100%{opacity:1;transform:scale(1);} }
+</style>
+</head>
+<body>
+<div class="loader">
+<img src="https://raw.githubusercontent.com/edenluxurytoken/Elux-Token/bd3fd19addbd6777117785984a32f7151122c922/1000007990_1_64x64.png" class="loading-logo">
+<div>Loading ELUX...</div>
+</div>
+<header>
+<img src="https://raw.githubusercontent.com/edenluxurytoken/Elux-Token/bd3fd19addbd6777117785984a32f7151122c922/1000007990_1_64x64.png" class="logo">
+<nav>
+<a href="#home">Home</a>
+<a href="#about">Vision</a>
+<a href="#tokenomics">Tokenomics</a>
+<a href="#roadmap">Roadmap</a>
+<a href="#coming">Coming Soon</a>
+<a href="#whitepaper">Whitepaper</a>
+<a href="#contact">Contact</a>
+<span class="lang-btn" onclick="changeLang('en')">🇬🇧</span>
+<span class="lang-btn" onclick="changeLang('fr')">🇫🇷</span>
+</nav>
+</header>
+<section id="home">
+<img src="https://raw.githubusercontent.com/edenluxurytoken/Elux-Token/bd3fd19addbd6777117785984a32f7151122c922/1000007990_1_64x64.png" class="hero-logo">
+<h1>ELUX TOKEN</h1>
+<p class="slogan">The elegance of luxury, the innovation of blockchain.</p>
+<a href="#tokenomics" class="btn">Discover the project</a>
+</section>
+<!-- Additional sections would go here -->
+<script>
+window.onload=function(){document.querySelector('.loader').style.display='none';};
+function changeLang(lang){/* language switcher */}
+</script>
+</body>
+</html>
