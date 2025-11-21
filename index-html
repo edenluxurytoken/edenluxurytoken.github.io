@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ELUX TOKEN</title>
+  <style>
+    html { scroll-padding-top: 120px; scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #000; color: #D4AF37; text-align: center; }
+
+    /* Header */
+    header { display: flex; justify-content: space-between; align-items: center; padding: 15px 40px;
+      background: rgba(0,0,0,0.9); backdrop-filter: blur(3px); position: fixed; width: 100%; top: 0;
+      border-bottom: 1px solid #D4AF37; z-index: 10; }
+
+    .logo { max-width: 140px; transition: 0.3s; }
+    .logo:hover { filter: drop-shadow(0 0 10px gold); transform: scale(1.05); }
+
+    nav a, .lang-btn { margin: 0 10px; color: #D4AF37; text-decoration: none; font-weight: bold; cursor: pointer; }
+    nav a:hover, .lang-btn:hover { color: #F5D76E; text-shadow: 0 0 8px gold; }
+
+    /* Sections */
+    section { padding: 100px 20px; }
+    #home { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+
+    .hero-logo { max-width: 220px; animation: fadeIn 1.2s ease-in-out; }
+    h1 { font-size: 3rem; animation: fadeIn 1.4s ease-in-out; }
+    .slogan { font-size: 1.3rem; font-style: italic; color: #F5D76E; animation: shine 3s infinite linear; }
+
+    /* Buttons */
+    .btn, .community-btn { padding: 12px 25px; background: #D4AF37; color: #000; font-weight: bold; border-radius: 5px;
+      text-decoration: none; margin-top: 15px; display: inline-block; }
+    .btn:hover, .community-btn:hover { background: #F5D76E; box-shadow: 0 0 12px gold; }
+
+    /* Coming soon */
+    #coming { background: #111; }
+    .countdown { font-size: 1.6rem; color: #F5D76E; }
+    .prelaunch { font-size: 1.1rem; font-style: italic; margin-top: 5px; }
+
+    /* Loader */
+    .loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000;
+      display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 1000; }
+    .loading-logo { max-width: 150px; animation: logoLoad 1.5s ease-in-out; }
+
+    /* Animations */
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes shine { 0% { text-shadow: 0 0 3px gold; } 50% { text-shadow: 0 0 15px gold; } 100% { text-shadow: 0 0 3px gold; } }
+    @keyframes logoLoad { 0% { opacity: 0; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1.05); }
+      100% { opacity: 1; transform: scale(1); } }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      .hero-logo { max-width: 160px; }
+      nav { display: flex; flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+
+<body class="loading">
+  <!-- PAGE LOADER -->
+  <div class="loader">
+    <img src="https://raw.githubusercontent.com/edenluxurytoken/Elux-Token/bd3fd19addbd6777117785984a32f7151122c922/1000007990_1_64x64.png" class="loading-logo">
+    <div>Loading ELUX...</div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <img src="https://raw.githubusercontent.com/edenluxurytoken/Elux-Token/bd3fd19addbd6777117785984a32f7151122c922/1000007990_1_64x64.png" class="logo">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">Vision</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#coming">Coming Soon</a>
+      <a href="#whitepaper">Whitepaper</a>
+      <a href="#contact">Contact</a>
+      <span class="lang-btn" onclick="changeLang('en')">🇬🇧</span>
+      <span class="lang-btn" onclick="changeLang('fr')">🇫🇷</span>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home">
+    <img src="https://raw.githubusercontent.com/edenluxurytoken/Elux-Token/bd3fd19addbd6777117785984a32f7151122c922/1000007990_1_64x64.png" class="hero-logo">
+    <h1 data-fr="TOKEN ELUX">ELUX TOKEN</h1>
+    <p class="slogan" data-fr="L’élégance du luxe, l’innovation de la blockchain.">The elegance of luxury, the innovation of blockchain.</p>
+    <a href="#tokenomics" class="btn" data-fr="Découvrir le projet">Discover the project</a>
+  </section>
+
+  <!-- COMING SOON -->
+  <section id="coming">
+    <h2 data-fr="🚀 Lancement – 2026">🚀 Coming Soon – 2026</h2>
+    <p>Official launch approaching...</p>
+    <p class="countdown" id="countdown"></p>
+    <p class="prelaunch">Pre-launch phase activated.</p>
+    <a href="https://t.me/edenluxurytoken" target="_blank" class="community-btn">Join the Community</a>
+  </section>
+
+  <!-- WHITEPAPER -->
+  <section id="whitepaper">
+    <h2>Whitepaper – Coming Soon</h2>
+    <p data-fr="Le document officiel sera bientôt publié.">The official document will be released soon.</p>
+    <p class="prelaunch">Drafting phase in progress.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><a href="mailto:saidnicole47@gmail.com">saidnicole47@gmail.com</a></p>
+    <p><a href="https://bscscan.com/address/0xC90466BbcF87620EC595179876921B52F9b71931" target="_blank">
+      Smart Contract: 0xC90466BbcF87620EC595179876921B52F9b71931
+    </a></p>
+  </section>
+
+  <script>
+    // Loader removal
+    window.onload = () => {
+      document.querySelector('.loader').style.display = 'none';
+      document.body.classList.remove('loading');
+    };
+
+    // Countdown
+    const countdownEl = document.getElementById("countdown");
+    const launchDate = new Date("January 1, 2026 00:00:00").getTime();
+    setInterval(() => {
+      const now = new Date().getTime();
+      const diff = launchDate - now;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      countdownEl.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
+
+    // Language switch
+    function changeLang(lang) {
+      document.querySelectorAll("[data-fr]").forEach(el => {
+        el.innerText = lang === "fr" ? el.getAttribute("data-fr") : el.getAttribute("data-en") || el.innerText;
+      });
+    }
+  </script>
+</body>
+</html>
