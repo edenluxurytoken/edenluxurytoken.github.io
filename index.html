@@ -6,6 +6,14 @@
   <title>ELUX TOKEN</title>
   <style>
     body { margin: 0; font-family: Arial, sans-serif; color:#D4AF37; background:#000; text-align:center; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px; /* Pour compenser le header fixe */
+}
+
+section {
+  min-height: 100vh; /* Force chaque section à occuper toute la hauteur de l’écran */
+}
 
     header {
       display:flex; justify-content:space-between; align-items:center;
@@ -158,11 +166,12 @@
 
     // Language switch
     function changeLang(lang) {
-      document.querySelectorAll("[data-fr]").forEach(el => {
-        if (lang === "fr") el.innerText = el.getAttribute("data-fr");
-      });
-      document.querySelectorAll("[data-fr]").forEach(el => {
-        if (lang === "en") el.innerText = el.getAttribute("data-en") || el.innerText;
+  document.querySelectorAll("[data-en]").forEach(el => {
+    const text = lang === "fr" ? el.getAttribute("data-fr") : el.getAttribute("data-en");
+    if (text) el.innerText = text;
+  });
+}
+
       });
     }
   </script>
