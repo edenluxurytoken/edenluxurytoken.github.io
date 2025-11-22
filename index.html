@@ -1,1 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ELUX TOKEN</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 140px; /* Amélioré pour mobile */
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #D4AF37;
+      background: #000;
+      text-align: center;
+    }
+
+    /* Loader (inchangé) */
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .loading-logo { max-width: 150px; animation: logoLoad 1.5s ease-in-out; }
+    .loader-text { color: #D4AF37; margin-top: 10px; animation: shine 2s infinite linear; }
+    .loader-bar { width: 150px; height: 4px; background: #D4AF37; margin-top: 10px; animation: grow 2s infinite ease-in-out; }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 25px; /* Optimisé */
+      background: rgba(0, 0, 0, 0.9);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      border-bottom: 1px solid #D4AF37;
+      z-index: 10;
+    }
+    .logo { max-width: 120px; transition: 0.3s; }
+    .logo:hover { filter: drop-shadow(0 0 10px gold); transform: scale(1.05); }
+
+    nav a, .lang-btn {
+      margin: 0 8px;
+      color: #D4AF37;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+    nav a:hover, .lang-btn:hover { color: #F5D76E; text-shadow: 0 0 8px gold; }
+
+    /* Sections */
+    section {
+      padding: 140px 20px 80px; /* Amélioré pour tenir compte du header */
+      min-height: 100vh;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    h2 { font-size: 2rem; margin-bottom: 15px; }
+
+    section p {
+      max-width: 75%;
+      margin: auto;
+      line-height: 1.6;
+      font-size: 1.15rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header { padding: 10px 15px; }
+      nav a, .lang-btn { font-size: 0.8rem; margin: 0 5px; }
+      section p { max-width: 95%; font-size: 1rem; }
+      h2 { font-size: 1.6rem; }
+      .logo { max-width: 80px; }
+    }
+
+    /* Smooth scroll optimisation */
+    html {
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Animations inchangées */
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes shine {0% { text-shadow: 0 0 3px gold; } 50% { text-shadow: 0 0 15px gold; } 100% { text-shadow: 0 0 3px gold; }}
+    @keyframes grow {0% { width: 0; } 50% { width: 150px; } 100% { width: 0; }}
+    @keyframes logoLoad {0% { opacity: 0; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1.05); filter: drop-shadow(0 0 8px gold);} 100% { opacity: 1; transform: scale(1); }}
+  </style>
+</head>
+
+<body>
+  <!-- Loader inchangé -->
+  <div class="loader" id="loader">
+    <img src="https://raw.githubusercontent.com/edenluxurytoken/Elux-Token/bd3fd19addbd6777117785984a32f7151122c922/1000007990_1_64x64.png" class="loading-logo" alt="ELUX Logo">
+    <div class="loader-text">Loading ELUX...</div>
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <img src="https://raw.githubusercontent.com/edenluxurytoken/Elux-Token/bd3fd19addbd6777117785984a32f7151122c922/1000007990_1_64x64.png" class="logo" alt="ELUX Logo">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">Vision</a>
+      <a href="#tokenomics">Tokenomics</a> <!-- SECTION AJOUTÉE PLUS BAS -->
+      <a href="#roadmap">Roadmap</a>      <!-- SECTION AJOUTÉE PLUS BAS -->
+      <a href="#investor">Investor</a>
+      <a href="#coming">Coming Soon</a>
+      <a href="#whitepaper">Whitepaper</a> <!-- SECTION AJOUTÉE PLUS BAS -->
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- EXISTING SECTIONS (inchangés sauf Investor link Canva) -->
+  <!-- ... -->
+
+  <!-- Investor -->
+  <section id="investor">
+    <h2>Investor Presentation</h2>
+    <p>
+      ELUX Token is positioned at the crossroads...
+    </p>
+    <!-- 🔹 Nouveau lien Canva en affichage direct -->
+    <a href="https://www.canva.com/design/DAG5K9dq-fQ/sT17vuS-a7H1hcF3xF1hfw/view" target="_blank" class="btn">
+       View Pitch Deck
+    </a>
+    <a href="#contact" class="btn">Get in touch</a>
+  </section>
+
+  <!-- 🔥 AJOUT DES SECTIONS MANQUANTES -->
+  <section id="tokenomics">
+    <h2>Tokenomics</h2>
+    <p>Details about allocation, vesting and total supply.</p>
+  </section>
+
+  <section id="roadmap">
+    <h2>Roadmap</h2>
+    <p>Key milestones from token launch to hotel development.</p>
+  </section>
+
+  <section id="whitepaper">
+    <h2>Whitepaper</h2>
+    <p>Access full technical project documentation.</p>
+    <a href="#" class="btn">Download Whitepaper</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><a href="mailto:elux.token@proton.me">elux.token@proton.me</a></p>
+  </section>
+
+<script>
+  window.addEventListener('load', () => {
+    document.getElementById('loader').style.display = 'none';
+    startCountdown();
+  });
+
+  function startCountdown() {
+    const el = document.getElementById("countdown");
+    if (!el) return;
+    const launch = new Date("2026-01-01").getTime();
+    setInterval(() => {
+      const now = new Date().getTime();
+      const diff = launch - now;
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      el.innerText = `${d}d ${h}h`;
+    }, 1000);
+  }
+</script>
+
+</body>
+</html>
 
