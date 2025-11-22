@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ELUX TOKEN</title>
+
+  <!-- SEO & Meta Investor -->
+  <meta name="description" content="ELUX Token – Luxury & blockchain investment. Transforming Web3 into real-world high-end hospitality projects.">
+  <meta name="keywords" content="ELUX Token, Luxury, Blockchain, Hospitality, Investment, Web3, Hotel, Real Estate, Investor">
+  <meta name="author" content="ELUX Token">
+  <meta property="og:title" content="ELUX Token – Luxury & Blockchain Investment">
+  <meta property="og:description" content="Premium investment in high-end hospitality projects powered by Web3 innovation.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/edenluxurytoken/Elux-Token/bd3fd19addbd6777117785984a32f7151122c922/1000007990_1_64x64.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://edenluxurytoken.github.io/">
+  <meta name="robots" content="index, follow">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 180px; /* Évite que le header cache les titres */
+    }
+
+    /* Titres or → blanc au passage */
+    section h2 {
+      color: #FFD700;
+      transition: color 0.4s ease-in-out;
+    }
+    section:hover h2 {
+      color: white;
+    }
+
+    /* Le reste de ton style reste IDENTIQUE */
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #D4AF37;
+      background: #000;
+      text-align: center;
+    }
+
+    .btn, .community-btn {
+      padding: 12px 25px;
+      background: #D4AF37;
+      color: #000;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 15px;
+      display: inline-block;
+    }
+    .btn:hover, .community-btn:hover {
+      background: #F5D76E;
+      box-shadow: 0 0 12px gold;
+    }
+
+    @media (max-width: 768px) {
+      html { scroll-padding-top: 200px; } /* Mobile correction */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Investor section -->
+  <section id="investor">
+    <h2 data-en="Investor Presentation" data-fr="Présentation investisseurs">Investor Presentation</h2>
+    <p data-en="ELUX Token is positioned at the crossroads of luxury and blockchain innovation. Designed to finance real-world high-end hospitality projects, ELUX offers a unique opportunity to participate in a visionary investment strategy with long-term value creation. The first flagship project is planned for 2026, with expansion to Dubai and international hubs."
+       data-fr="ELUX Token se positionne à la croisée du luxe et de l’innovation blockchain. Conçu pour financer des projets hôteliers haut de gamme réels, ELUX offre une opportunité unique de participer à une stratégie d’investissement visionnaire avec création de valeur à long terme. Le premier projet emblématique est prévu pour 2026, avec une expansion vers Dubaï et des hubs internationaux.">
+       ELUX Token is positioned at the crossroads...
+    </p>
+
+    <!-- Pitch Deck -->
+    <a href="https://www.canva.com/design/DAG5K9dq-fQ/sT17vuS-a7H1hcF3xF1hfw/view" target="_blank" class="btn"
+       data-en="View Pitch Deck" data-fr="Voir le Pitch">View Pitch Deck</a>
+
+    <!-- Get in touch -->
+    <a href="#contact" class="btn" data-en="Get in touch" data-fr="Nous contacter">Get in touch</a>
+
+    <!-- I am an Investor -->
+    <a href="mailto:elux.token@proton.me?subject=Investor%20Inquiry" target="_blank" class="btn"
+       data-en="I am an Investor" data-fr="Je suis investisseur">I am an Investor</a>
+
+    <!-- Book a Call (scroll vers contact pour l’instant) -->
+    <a href="#contact" class="btn" data-en="Book a Call" data-fr="Réserver un appel">Book a Call</a>
+  </section>
+
+  <!-- Roadmap améliorée -->
+  <section id="roadmap">
+    <h2 data-en="Roadmap" data-fr="Feuille de route">Roadmap</h2>
+    <p data-en="2024: Strategic development and token concept | 2025: Token launch & investor onboarding | 2026: Launch of first eco-luxury hotel | 2027: Dubai expansion."
+       data-fr="2024 : Développement stratégique et concept du token | 2025 : Lancement du token & onboarding investisseurs | 2026 : Lancement du premier hôtel éco-luxe | 2027 : Expansion à Dubaï.">
+       2024: Strategic development and token concept | 2025: Token launch & investor onboarding | 2026: Launch of first eco-luxury hotel | 2027: Dubai expansion.
+    </p>
+  </section>
+
+  <!-- Whitepaper -->
+  <section id="whitepaper">
+    <h2 data-en="Whitepaper" data-fr="Livre blanc">Whitepaper</h2>
+    <p data-en="Whitepaper is under development and will be available soon."
+       data-fr="Le livre blanc est en cours de préparation et sera bientôt disponible.">
+       Whitepaper is under development and will be available soon.
+    </p>
+
+    <!-- PDF disponible sur GitHub -->
+    <a href="elux_pitch.pdf" target="_blank" class="btn"
+       data-en="Download Mini Pitch" data-fr="Télécharger le Mini Pitch">Download Mini Pitch</a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 data-en="Contact" data-fr="Contact">Contact Us</h2>
+    <p data-en="For investor inquiries or partnerships:"
+       data-fr="Pour les demandes d’investisseurs ou de partenariats :">
+       For investor inquiries or partnerships:
+    </p>
+    <form>
+      <input type="text" placeholder="Full Name">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <script>
+    function changeLang(lang) {
+      document.querySelectorAll("[data-en]").forEach(el => {
+        const txt = (lang === "fr") ? el.getAttribute("data-fr") : el.getAttribute("data-en");
+        if (txt !== null) {
+          if (el.tagName === "A" || el.tagName === "BUTTON") {
+            el.innerHTML = txt;
+          } else {
+            el.textContent = txt;
+          }
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
 
